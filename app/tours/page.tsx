@@ -30,11 +30,12 @@ async function ToursPage() {
               href={`/tours/${tour.id}`}
               className="hover:text-blue-500"
             >
-              <div>
+              <div className="relative h-48 mb-2">
                 <Image
                   src={tour.image}
                   alt={tour.name}
                   fill
+                  sizes="(max-width:768px) 100vw,(max-width:1200px) 50vw,33vw"
                   priority
                   className="object-cover"
                 />
