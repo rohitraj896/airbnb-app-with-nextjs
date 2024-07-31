@@ -9,7 +9,7 @@ type Tour = {
   image: string;
   price: string;
 };
-
+//
 const fetchTours = async () => {
   await new Promise(resolve => setTimeout(resolve, 3000));
   const response = await fetch(url);
