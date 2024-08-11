@@ -11,6 +11,8 @@ type Tour = {
 };
 
 const fetchTours = async () => {
+  console.log("#######");
+  console.log("fetchin.....");
   await new Promise(resolve => setTimeout(resolve, 3000));
   const response = await fetch(url);
   const data: Tour[] = await response.json();
@@ -19,6 +21,7 @@ const fetchTours = async () => {
 
 async function ToursPage() {
   const data = await fetchTours();
+
   return (
     <section>
       <h1 className="text-3xl mb-4">Tours</h1>
